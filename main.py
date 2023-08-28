@@ -37,7 +37,7 @@ for i in range((df.shape[0])-1):
         if df['Powered by'].iloc[i] == 'Natural Gas':
             natural_gas = driver.find_element_by_xpath(".//*[@option='NATURAL_GAS']").click()
         elif df['Powered by'].iloc[i] == 'Biomethane':
-            biomethane = natural_gas = driver.find_element_by_xpath(".//*[@option='BIO_METHANE']").click()
+            biomethane =  driver.find_element_by_xpath(".//*[@option='BIO_METHANE']").click()
 
     addbatch = driver.find_element_by_xpath("//button[@class ='kit__button   btn btn-danger']")
     addbatch.send_keys(Keys.RETURN)
